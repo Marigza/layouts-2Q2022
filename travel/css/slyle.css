@@ -148,4 +148,10 @@ body{
     text-decoration: none;
 }
 /* header styles end*/
-/**/
+/*preview styles start*/
+
+.preview{
+    height: 100vh;
+    background: url(../img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center;
+    background-size: cover;
+}
