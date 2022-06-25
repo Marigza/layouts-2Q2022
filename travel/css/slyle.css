@@ -97,6 +97,8 @@ body{
 /*header styles start*/
 .header{
     background-color: rgba(242, 120, 92, 0.7);
+    position: relative;
+    z-index: 2;
 }
 .wrapper{
     max-width: 1200px;
@@ -108,7 +110,7 @@ body{
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 0 24px 0;
+    height: 90px;
 }
 
 .header_list{
@@ -148,8 +150,10 @@ body{
     text-decoration: none;
 }
 /* header styles end*/
-/*preview styles start*/
-
+/*main styles start*/
+.main{
+    margin: -90px 0 0 0;
+}
 .preview{
     height: 100vh;
     background: url(../img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center;
