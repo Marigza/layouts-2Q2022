@@ -151,11 +151,10 @@ body{
 }
 /* header styles end*/
 /*main styles start*/
-.main{
-    margin: -90px 0 0 0;
-}
+
 .preview{
     height: 100vh;
     background: url(../img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center;
     background-size: cover;
+    margin: -90px 0 0 0;
 }
