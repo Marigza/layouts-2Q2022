@@ -33,29 +33,6 @@
         url('../fonts/aleo-v11-latin-700.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
-/* magra-regular - latin */
-@font-face {
-    font-family: 'Magra';
-    font-style: normal;
-    font-weight: 400;
-    src: local(''),
-        url('../fonts/magra-v14-latin-regular.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/magra-v14-latin-regular.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
-
-/* magra-700 - latin */
-@font-face {
-    font-family: 'Magra';
-    font-style: normal;
-    font-weight: 700;
-    src: local(''),
-        url('../fonts/magra-v14-latin-700.woff2') format('woff2'),
-        /* Chrome 26+, Opera 23+, Firefox 39+ */
-        url('../fonts/magra-v14-latin-700.woff') format('woff');
-    /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
-}
 /* red-hat-text-regular - latin */
 @font-face {
     font-family: 'Red Hat Text';
@@ -150,11 +127,126 @@ body{
     text-decoration: none;
 }
 /* header styles end*/
-/*main styles start*/
+/*preview styles start*/
 
 .preview{
-    height: 100vh;
+    min-height: 100vh;
     background: url(../img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center;
     background-size: cover;
-    margin: -90px 0 0 0;
+    margin: -90px 0 90px 0;
+}
+.wrapper_preview{
+    width: 892px;
+    height: 422px;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 150px;
+    left: 120px;
+    border: 1px solid #000;
+    
+}
+.preview_title{
+    margin: 0 0 50px 0;
+    padding: 0;
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 96px;
+    color: #FFFFFF;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.preview_subtitle{
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 46px;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.searchform_wrap{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 18px 18px 41px;
+    height: 95px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 16px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.searchform_field{
+    font-family: 'Aleo';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    background: transparent;
+    flex-grow: 1;
+    border: none;
+    color: #F2785C;
+}
+.searchform_button{
+    width: 228px;
+    height: 59px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    color: #FFFFFF;
+    font-family: 'Red Hat Text';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 32px;
+    padding: auto;
+}
+input::placeholder {
+    color: #F2785C;
+}
+
+.searchform_button:hover, 
+.searchform_button:focus, 
+.searchform_button:active{
+    background-color: #023740;
+}
+/*preview styles end*/
+
+/*steps styles start*/
+
+.steps{
+    margin-bottom: 122px;
+}
+.steps_title{
+    font-size: 40px;
+    line-height: 53px;
+    font-weight: 500;
+    color: #F2785C;
+    text-align: center;
+}
+.steps_block{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.step_item{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+.steps_icon{
+    height: 100px;
+    width: 100px;
+    margin: 0 auto 50px auto;
+}
+.steps_caption{
+    font-family: 'Aleo';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
 }
