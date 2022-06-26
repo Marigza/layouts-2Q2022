@@ -341,12 +341,15 @@ input::placeholder {
     text-align: center;
 }
 .story_wrapper{
+    width: 1440px;
+    height: 1356px;
     background: url(../img/bg_bottom.jpg) no-repeat center;
     background-size: cover;
-    margin: 0 0 0 0;
+    margin: 70px 0 -70px 0;
 }
 .wrapper_opasity{
     background: rgba(255, 255, 255, 0.6);
+    
 }
 .stories_item{  
     display: flex;
@@ -409,10 +412,8 @@ input::placeholder {
 /*footer styles start*/
 
 .footer{
-    background-color: #0D606F;
     height: 70px;
     padding: 20px 0;
-    
 }
 .footer_info{
     display: flex;
