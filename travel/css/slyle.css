@@ -58,6 +58,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -106,8 +107,8 @@ body {
 .header_list {
     display: flex;
     flex-wrap: wrap;
-    padding: 0;
-    margin: 0;
+    padding: 0 ;
+    margin: 0 40px 0 0 ;
 }
 
 .header-item {
@@ -158,10 +159,11 @@ body {
 /*preview styles start*/
 
 .preview {
-    min-height: 100vh;
+    height: 765px;
     background: url(../img/garrett-parker-DlkF4-dbCOU-unsplash\ 1.jpg) no-repeat center;
     background-size: cover;
-    margin: -90px 0 90px 0;
+    position: relative;
+    top: -90px;
 }
 
 .wrapper_preview {
@@ -170,12 +172,12 @@ body {
     margin: 0;
     padding: 0;
     position: relative;
-    top: 150px;
+    top: 122px;
     left: 120px;
 }
 
 .preview_title {
-    margin: 0 0 50px 0;
+    margin: 0 0 35px 0;
     padding: 0;
     font-family: 'Aleo';
     font-style: normal;
@@ -193,7 +195,7 @@ body {
     font-size: 20px;
     line-height: 24px;
     color: #FFFFFF;
-    margin-bottom: 46px;
+    margin-bottom: 42px;
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
@@ -252,7 +254,8 @@ input::placeholder {
 /*steps styles start*/
 
 .steps {
-    margin-bottom: 122px;
+    margin-top: -40px;
+    margin-bottom: 80px;
 }
 
 .steps_title {
@@ -261,6 +264,7 @@ input::placeholder {
     font-weight: 500;
     color: #F2785C;
     text-align: center;
+    margin-bottom: 20px;
 }
 
 .steps_block {
@@ -273,12 +277,18 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.step_item:nth-child(2) {
+    padding-left: 68px;
 }
 
 .steps_icon {
     height: 100px;
     width: 100px;
-    margin: 0 auto 50px auto;
+    margin: 0 auto 31px auto;
 }
 
 .steps_caption {
@@ -300,6 +310,7 @@ input::placeholder {
     font-weight: 500;
     color: #F2785C;
     text-align: center;
+    margin-bottom: 45px;
 }
 
 .destination_item {
@@ -310,6 +321,7 @@ input::placeholder {
     padding: 0px;
     gap: 60px;
     overflow: hidden;
+    
 }
 
 .foto {
@@ -322,7 +334,7 @@ input::placeholder {
     line-height: 42px;
     color: #FFFFFF;
     text-transform: uppercase;
-    transform: translateY(-80px) translateX(15px);
+    transform: translateY(-85px) translateX(15px);
 }
 
 .pointer {
@@ -332,6 +344,7 @@ input::placeholder {
     justify-content: center;
     padding: 0px;
     gap: 10px;  
+    margin-top: -20px;
 }
 
 .pointer_round {
@@ -361,7 +374,7 @@ input::placeholder {
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
     border-radius: 10px;
     border: none;
-    margin: 50px auto;
+    margin: 39px auto 77px auto;
 }
 
 .destination_link:hover,
@@ -391,14 +404,15 @@ input::placeholder {
 
 .story_wrapper {
     width: 1440px;
-    height: 1356px;
+    height: 1331px;
     background: url(../img/bg_bottom.jpg) no-repeat center;
     background-size: cover;
-    margin: 70px 0 -70px 0;
+    margin: 42px 0 -70px 0;
 }
 
 .wrapper_opasity {
-    background: rgba(255, 255, 255, 0.6);  
+    background: rgba(255, 255, 255, 0.6);
+    height: 1268px;  
 }
 
 .stories_item {  
@@ -451,6 +465,7 @@ input::placeholder {
     line-height: 24px;
     color: #0D606F;
     margin-bottom: 0;
+    padding: 3px 0 0 0;
 }
 
 .media_link {
@@ -490,7 +505,7 @@ input::placeholder {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10px;
+    gap: 18px;
     list-style: none;
 }
 
