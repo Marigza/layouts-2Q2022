@@ -56,9 +56,11 @@
         url('../fonts/red-hat-text-v11-latin-500.woff') format('woff');
     /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
+
 html{
     box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
 body{
     width: 1440px;
@@ -328,6 +330,7 @@ input::placeholder {
 
 /*stories styles start*/
 
+
 .stories_title{
     font-size: 40px;
     line-height: 53px;
@@ -335,24 +338,40 @@ input::placeholder {
     color: #F2785C;
     text-align: center;
 }
-.stories_item{
+.story_wrapper{
+    background: url(../img/bg_bottom.jpg) no-repeat center;
+    background-size: cover;
+    margin: 0 0 -10px 0;
+}
+.wrapper_opasity{
+    background: rgba(255, 255, 255, 0.6);
+}
+.stories_item{  
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 20px;
+    gap: 10px;
+    min-height: 100vh;
+    
 }
 .unical_story{
     display: flex;
     align-items: flex-start;
+    margin-bottom: 30px; 
+}
+.unical_story:first-child{
+    margin-top: 40px;
 }
 .media_object{
-    margin-right: 1em;
+    margin: 0 40px 0 0;
     width: 400px;
     box-shadow: 0px 4px 4px #0D606F;
     border-radius: 16px;
 }
 .media_body{
     flex: 1;
+    margin: 0;
+    padding: 0;
 }
 .media_header{
     font-family: 'Aleo';
@@ -361,6 +380,8 @@ input::placeholder {
     font-size: 35px;
     line-height: 42px;
     color: #0D606F;
+    margin: 0;
+    padding: 0;
 }
 .media_content{
     font-family: 'Aleo';
@@ -369,12 +390,14 @@ input::placeholder {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+    margin-bottom: 0;
 }
 .media_link{
     font-family: 'Aleo';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 20px;
-        line-height: 24px;
-        color: #0D606F;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #0D606F;
+
 }
