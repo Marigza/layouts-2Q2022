@@ -201,8 +201,8 @@ body {
 }
 
 .wrapper_preview {
-    width: 892px;
-    height: 422px;
+    max-width: 892px;
+    max-height: 422px;
     margin: 0;
     padding: 0;
     position: relative;
@@ -239,7 +239,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 18px 18px 18px 41px;
-    height: 95px;
+    max-height: 95px;
     background-color: rgba(255, 255, 255, 0.7);
     border-radius: 16px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -258,7 +258,7 @@ body {
 }
 
 .searchform_button {
-    width: 228px;
+    max-width: 228px;
     height: 59px;
     background: #0D606F;
     box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
@@ -437,7 +437,7 @@ input::placeholder {
 }
 
 .story_wrapper {
-    width: 1440px;
+    max-width: 1440px;
     height: 1331px;
     background: url(../img/bg_bottom.jpg) no-repeat center;
     background-size: cover;
@@ -547,9 +547,10 @@ input::placeholder {
 
 /* media start*/
 
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 400px) {
     .header_burger {
         display: block;
+        top: -5px;
     }
     .header_nav {
         width: 165px;
@@ -608,6 +609,62 @@ input::placeholder {
     .header_nav-close-line:last-child {
         transform: translateY(-50%) rotate(-45deg);
     }
+    .header_login {
+        display: none;
+    }
+    .travel_portal-text {
+        display: none;
+    }
+    .header {
+        background: transparent;
+    }
+    .preview {
+        background: url(../img/garrett-small.jpg) no-repeat center;
+        height: 251px;
+    }
+    .preview_title {
+        display: none;
+    }
+    .preview_subtitle {
+        display: none;
+    }
+    .searchform_wrap {
+        padding: 10px;
+        max-height: 48px;
+        border-radius: 16px;
+    }
+    .wrapper_preview {
+        max-width: 892px;
+        max-height: 422px;
+        margin: 0 auto;
+        padding: 15px;
+        position: relative;
+        top: 122px;
+        left: 0;
+        }
+    .searchform_field {
+        font-size: 14px;
+        line-height: 17px;
+        }
+    .searchform_button {
+        max-width: 92px;
+        height: 30px;
+        font-size: 11px;
+        line-height: 15px;
+        }
+
+}
+
+@media screen and (max-width: 340px) {
+    .searchform_button {   
+        font-size: 9px;
+        line-height: 12px;
+    }
+    .searchform_field {
+        font-size: 10px;
+        line-height: 14px;
+    }
+
 }
 
 /* media end*/
