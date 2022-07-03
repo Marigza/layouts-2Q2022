@@ -361,6 +361,9 @@ input::placeholder {
 .foto {
     border-radius: 16px;
 }
+.foto_small {
+    display: none;
+}
 
 .destination_caption {
     font-weight: 500;
@@ -389,7 +392,7 @@ input::placeholder {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.pointer_round2 {
+.pointer_round:nth-child(2) {
     width: 20px;
     height: 20px;
     background-color: rgba(242, 120, 92);
@@ -702,8 +705,50 @@ input::placeholder {
     .steps_caption3 {
         text-align: right;
     }
+    .foto {
+        display: none;
+    }
+    .foto_small {
+        display: block;
+        border-radius: 16px;
+    }
+    .destination_caption {
+        font-size: 20px;
+        line-height: 26px;
+        transform: translateY(-200px) translateX(15px);
+    }
+    .pointer {
+        gap: 6px;
+        margin-top: -50px;
+    }
+    .pointer_round, 
+    .pointer_round:nth-child(2) {
+        width: 8px;
+        height: 8px;
+    }
+    .destination_link {
+        gap: 6px;
+        width: 92px;
+        height: 30px;
+                margin: 39px auto 77px auto;
+    }
+    .link_find_more {
+        font-size: 11px;
+        line-height: 15px;
+    }
+    .arrow_small {
+        width: 10px;
+    }
 }
 
+@media screen and (max-width: 380px) {
+    .foto_small {
+        max-width: 300px;
+    }
+    .destination_caption {
+        transform: translateY(-160px) translateX(15px);
+    }
+}
 @media screen and (max-width: 340px) {
     .searchform_button {   
         font-size: 9px;
@@ -724,6 +769,7 @@ input::placeholder {
     .step_item:nth-child(2) {
         width: 80px;
     }
+    
 }
 
 /* media end*/
