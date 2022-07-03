@@ -601,7 +601,6 @@ input::placeholder {
        position: absolute;
        top: 50%;
        left: 25%;
-       
     }
     .header_nav-close-line:first-child {
         transform: translateY(-50%) rotate(45deg);
@@ -621,6 +620,11 @@ input::placeholder {
     .preview {
         background: url(../img/garrett-small.jpg) no-repeat center;
         height: 251px;
+    }
+    .preview_gradient {
+        position: relative;
+        height: 100%;
+        background: linear-gradient(180deg, #0D606F 0%, rgba(13, 96, 111, 0) 25.1%);
     }
     .preview_title {
         display: none;
@@ -652,7 +656,55 @@ input::placeholder {
         font-size: 11px;
         line-height: 15px;
         }
-
+    .steps_title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: ;
+        }
+    .destination_title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: ;
+    }
+    .stories_title {
+        font-size: 14px;
+        line-height: 19px;
+        margin-bottom: ;
+    }
+    .steps_block {
+        width: 100%;
+        margin: 0;
+    }
+    .step_item {
+        margin: 0;
+        padding: 0;
+        width: 90px;
+    }
+    .step_item:nth-child(2) {
+        padding-left: 0;
+        width: 111px;
+        align-items: center;
+    }
+    .step_item:last-child {
+        align-items: flex-end;
+    }
+    .steps_icon {
+        height: 70px;
+        width: 70px;
+        margin: 0;
+        margin-bottom: 19px;
+    }
+    .steps_caption {
+        font-size: 10px;
+        line-height: 12px;
+        margin: 0;
+    }
+    .steps_caption2 {
+        text-align: center;
+    }
+    .steps_caption3 {
+        text-align: right;
+    }
 }
 
 @media screen and (max-width: 340px) {
@@ -664,7 +716,17 @@ input::placeholder {
         font-size: 10px;
         line-height: 14px;
     }
-
+    .steps_icon {
+        height: 70px;
+        width: 70px;
+    }
+    
+    .step_item {
+        width: 80px;
+    }
+    .step_item:nth-child(2) {
+        width: 80px;
+    }
 }
 
 /* media end*/
