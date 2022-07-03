@@ -119,6 +119,11 @@ body {
 
 .header-item:last-child {
     margin-right: 0;
+    display: none;
+}
+
+.header-item:nth-last-child(2) {
+    display: none;
 }
 
 .header_link {
@@ -567,10 +572,14 @@ input::placeholder {
         width: 100%;
         margin-right: 0;
         text-align: right;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .header-item:last-child {
         margin-bottom: 0;
+        display: block;
+    }
+    .header-item:nth-last-child(2) {
+        display: block;
     }
     .header_list {
         margin: 0;
