@@ -456,7 +456,7 @@ input::placeholder {
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    gap: 10px;
+    gap: 0px;
     min-height: 100vh;  
 }
 
@@ -512,6 +512,23 @@ input::placeholder {
     font-size: 20px;
     line-height: 24px;
     color: #0D606F;
+}
+.media_object-small {
+    display: none;
+}
+
+.stories_link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 228px;
+    height: 59px;
+    background: #0D606F;
+    box-shadow: 0px 0px 3px rgba(13, 96, 111, 0.08), 0px 2px 3px rgba(13, 96, 111, 0.16);
+    border-radius: 10px;
+    border: none;
+    margin: 0px auto 77px auto;
 }
 
 /*stories styles end*/
@@ -730,7 +747,7 @@ input::placeholder {
         gap: 6px;
         width: 92px;
         height: 30px;
-                margin: 39px auto 77px auto;
+        margin: 30px auto 30px auto;
     }
     .link_find_more {
         font-size: 11px;
@@ -738,6 +755,68 @@ input::placeholder {
     }
     .arrow_small {
         width: 10px;
+    }
+    .story_wrapper {
+        max-width: 390px;
+        height: 693px;
+        background: url(../img/bgBottomSmall.jpg) no-repeat center;
+        background-size: cover;
+        margin: 20px 0 -70px 0;
+    }
+    .wrapper_opasity {  
+        height: 657px;
+    }
+    .stories_item {
+        height: 100%;
+        gap: 0;  
+    }
+    .unical_story {
+        margin-bottom: 20px;
+        height: 130px;
+    }
+    .unical_story:first-child {
+        margin-top: 10px;
+    }
+    .media_object {
+        display: none;
+    }
+    .media_object-small {
+        display: block;
+        border-radius: 16px;
+        margin: 0 10px 0 0;
+        box-shadow: 0px 4px 4px #0D606F;
+    }
+    .media_body {
+        display: flex;
+        flex-direction: column;
+        height: 130px;
+    }
+    .media_header {
+        font-weight: 700;
+        font-size: 11px;
+        line-height: 13px;
+        
+    }
+    .media_content { 
+        height: 75%;
+        font-size: 9px;
+        line-height: 11px;
+        overflow: hidden;
+        padding: 0;
+        text-overflow: ellipsis;
+        margin-top: 9px;
+    }
+    
+    .media_link {
+        margin-top: 1px;
+        font-size: 9px;
+        line-height: 11px;
+    }
+    .stories_link {
+        gap: 6px;
+        width: 92px;
+        height: 30px;
+        margin: -110px auto 30px auto;
     }
 }
 
