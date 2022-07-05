@@ -818,6 +818,24 @@ input::placeholder {
         height: 30px;
         margin: -110px auto 30px auto;
     }
+    .footer_info {
+        margin-left: 0;
+        max-width: 100%;
+        
+    }
+    .info_text {
+        display: none;
+    }
+    .social_icon:first-child, 
+    .social_icon:nth-child(2) {
+        display: none;
+    }
+    .info_icon {
+        padding: 16px 0 16px 120px;
+    }
+    .social_icon {
+      margin: 0;  
+    }
 }
 
 @media screen and (max-width: 380px) {
