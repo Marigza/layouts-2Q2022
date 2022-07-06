@@ -813,17 +813,7 @@ input::placeholder {
         position: relative;
         top: -70px;
     } 
-    .destination_item {
-        /*position: relative;
-        left: 100%;    
-        display: flex;
-            flex-direction: row;
-            align-items: flex-start;
-            justify-content: center;
-            padding: 0px;
-            gap: 60px;
-            overflow: hidden;*/
-    }
+
     .destination_title {
         margin-bottom: 15px;
     }
