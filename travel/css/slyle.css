@@ -813,6 +813,17 @@ input::placeholder {
         position: relative;
         top: -70px;
     } 
+    .destination_item {
+        /*position: relative;
+        left: 100%;    
+        display: flex;
+            flex-direction: row;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 0px;
+            gap: 60px;
+            overflow: hidden;*/
+    }
     .destination_title {
         margin-bottom: 15px;
     }
@@ -836,6 +847,12 @@ input::placeholder {
     .pointer_round:nth-child(2) {
         width: 8px;
         height: 8px;
+    }
+    .pointer_round:nth-child(2) {    
+        background-color: rgba(242, 120, 92, 0.5);
+    }
+    .pointer_round:nth-child(1) {
+        background-color: rgba(242, 120, 92);
     }
     .destination_link {
         gap: 6px;
