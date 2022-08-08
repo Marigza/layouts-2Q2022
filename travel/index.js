@@ -32,3 +32,38 @@ console.log("Part2 Total points 85: \n done: 14 items");
         menu.classList.remove('header_nav_active');
     });
 }());
+
+// carousel
+
+const track = document.querySelector('.destin_slider');
+const slides = Array.from(track.children);
+const nextButton = document.querySelector('.carousel__button-right');
+const prevButton = document.querySelector('.carousel__button-left');
+const dotsNav = document.querySelector('.pointer');
+const dots = Array.from(dotsNav.children);
+const slideSize = slides[0].getBoundingClientRect();
+const slideWidth = slideSize.width;
+
+//console.log(slideWidth);
+// arrange the slides next to the another
+const setSlidePosition = (slide, index) => {
+    slide.style.left = slideWidth * index + 'px';
+};
+slides.forEach(setSlidePosition);
+
+// when I click left, move slides to the left
+
+
+// when I click right, move slides to the right
+nextButton.addEventListener('click', e => {
+    //move to the next slide
+    const currentSlide = track.querySelector('.current-slide');
+    const NextSlide = currentSlide.nextElementSibling;
+    const amountToMove = NextSlide.style.left;
+    
+    track.style.transform = 'translaleX(-' + amountToMove + ')'
+    //console.log(amountToMove);
+
+})
+
+// when I click the indicator, move to that slide

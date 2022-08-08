@@ -351,8 +351,11 @@ input::placeholder {
     text-align: center;
     margin-bottom: 45px;
 }
-
 .destination_item {
+    position: relative;
+}
+
+.destin_slider {
     display: flex;
     flex-direction: row;
     align-items: flex-start;
@@ -360,6 +363,9 @@ input::placeholder {
     padding: 0px;
     gap: 60px;
     overflow: hidden;
+    transition: 0.2s;
+    position: relative;
+    height: 100%;
 }
 
 .foto {
@@ -380,6 +386,25 @@ input::placeholder {
 .destin_arrows {
     display: none;
 }
+.button_left {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 800px;
+    width: 200px; 
+    z-index: 5;
+    cursor: pointer;
+}
+.button_right {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 800px;
+    width: 200px;
+    z-index: 5;
+    cursor: pointer;
+}
+
 .pointer {
     display: flex;
     flex-direction: row;
