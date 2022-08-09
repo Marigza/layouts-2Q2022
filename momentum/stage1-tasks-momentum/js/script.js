@@ -52,13 +52,13 @@ function setBg() {
     let timeOfDay = getTimeOfDay();
 
     const img = new Image();
-    img.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
+    img.src = `https://raw.githubusercontent.com/Marigza/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
         img.onload = () => {
         body.style.backgroundImage = `url(${img.src})`;
   }; 
     //return body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
 }
-//setBg()
+//setBg()https://github.com/Marigza/stage1-tasks/tree/assets/images/afternoon
 
 console.log(setBg())
 
