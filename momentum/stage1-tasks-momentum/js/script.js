@@ -6,9 +6,13 @@ const body = document.querySelector('body');
 let randomNum;
 const slideNext = document.querySelector('.slide-next');
 const slidePrev = document.querySelector('.slide-prev');
-
-
-
+const weatherIcon = document.querySelector('.weather-icon');
+const temperature = document.querySelector('.temperature');
+const weatherDescription = document.querySelector('.weather-description');
+const wind = document.querySelector('.wind');
+const humidity = document.querySelector('.humidity');
+const city = document.querySelector('.city');
+const weatherError = document.querySelector('.weather-error')
 
 function getRandomNum(min, max) {
     min = Math.ceil(min);
@@ -107,3 +111,46 @@ function getSlidePrev() {
     //console.log(setBg())
 }
 slidePrev.addEventListener('click', getSlidePrev)
+
+async function getWeather() {
+    try { 
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city.value}&lang=ru&appid=86e7c7a8410c6c0c5a87c8fe4d2181f8&units=metric`;
+    const res = await fetch(url);
+    const data = await res.json();
+
+    weatherIcon.className = 'weather-icon owf';
+    weatherIcon.classList.add(`owf-${data.weather[0].id}`);
+    weatherError.textContent = '';
+    temperature.textContent = `${Math.round(data.main.temp)}°C`;
+    weatherDescription.textContent = data.weather[0].description;
+    wind.textContent = `Wind speed: ${Math.round(data.wind.speed)}m/s`;
+    humidity.textContent = `Humidity: ${Math.round(data.main.humidity)}%`;
+    }
+    catch (error) {
+        weatherError.textContent = `Error! city not found for '${city.value}'!`
+        temperature.textContent = '';
+        weatherDescription.textContent = '';
+        wind.textContent = '';
+        humidity.textContent = '';
+        //console.log(error)
+    }
+    //console.log(url);
+}
+
+function setLocalStorageCity() {
+    localStorage.setItem('city', city.value);
+}
+window.addEventListener('beforeunload', setLocalStorageCity);
+
+let userCity = city.value;
+function getLocalStorageCity() {
+    if (localStorage.getItem('city')) {
+        city.value = localStorage.getItem('city');
+        getWeather();
+    }
+}
+window.addEventListener('load', getLocalStorageCity);
+
+//console.log(city.value)
+
+city.addEventListener('change', () => { getWeather() });
