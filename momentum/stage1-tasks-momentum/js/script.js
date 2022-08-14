@@ -12,7 +12,12 @@ const weatherDescription = document.querySelector('.weather-description');
 const wind = document.querySelector('.wind');
 const humidity = document.querySelector('.humidity');
 const city = document.querySelector('.city');
-const weatherError = document.querySelector('.weather-error')
+const weatherError = document.querySelector('.weather-error');
+let randomQuote;
+const quote = document.querySelector('.quote');
+const author = document.querySelector('.author');
+const changeQuoteBtn = document.querySelector('.change-quote');
+
 
 function getRandomNum(min, max) {
     min = Math.ceil(min);
@@ -59,10 +64,8 @@ function setBg() {
     img.src = `https://raw.githubusercontent.com/Marigza/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg`;
         img.onload = () => {
         body.style.backgroundImage = `url(${img.src})`;
-  }; 
-    //return body.style.backgroundImage = `url('https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/${timeOfDay}/${bgNum}.jpg')`;
+  };    
 }
-//setBg()https://github.com/Marigza/stage1-tasks/tree/assets/images/afternoon
 
 console.log(setBg())
 
@@ -154,3 +157,20 @@ window.addEventListener('load', getLocalStorageCity);
 //console.log(city.value)
 
 city.addEventListener('change', () => { getWeather() });
+
+async function getQuotes() {
+    const quotes = 'data.json';
+    const res = await fetch(quotes);
+    const data = await res.json();
+    //console.log(data);
+    randomQuote = getRandomNum(0, 1642);
+
+    quote.textContent = data[randomQuote].text;
+    author.textContent = data[randomQuote].author;
+}
+getQuotes();
+
+changeQuoteBtn.addEventListener('click', getQuotes);
+window.addEventListener('load', getQuotes);
+
+    
