@@ -1,0 +1,125 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    background: #E5E5E5;
+    font-size: 16px;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url(assets/home.png) no-repeat center;
+}
+
+.header {
+    font-size: 4em; 
+    text-align: center;
+    margin-bottom: 10vh;
+}
+
+
+.ancients {
+display: flex;
+justify-content: space-around;
+width: 100%;
+height: 20vh;
+margin-bottom: 10vh;
+}
+
+.ancient {
+    position: relative;
+    z-index: 3;
+}
+.ancient:hover {
+    height: 50vh;
+}
+
+ancient:active {
+    border: 5px solid blue;
+}
+
+.dificulty {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-bottom: 10vh;
+}
+.level {
+    width: 10vh;
+    border: 1px solid #fff;
+    text-align: center;
+}
+.level:hover {
+    border: 1px solid blue;
+}
+
+.level:active {
+    background-color: lightblue;
+}
+.card {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 5vh;
+}
+.tracker {
+    width: 30%;
+}
+.mixing_card {
+    width: 50%;
+}
+.stage_title {
+    font-size: 2em;
+    text-align: center;
+}
+.stage_color {
+    display: flex;
+    justify-content: space-around;
+}
+.green {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+.brown {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8b4513;
+}
+.blue {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3535f9;
+}
+
+.mixing_card {
+    display: flex;
+    justify-content: space-around;
+    height: 30vh;
+    width: 50%;
+}
+.close,
+.open {
+    width: 30%;
+    border: 1px solid #fff;
+    
+}
+
+.close {
+    background: url(assets/mythicCardBackground.png) no-repeat center;
+}
