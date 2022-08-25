@@ -316,4 +316,4 @@ const greenCardsData = [
     },
 ]
 
-export default blueCardsData;
+export { blueCardsData, greenCardsData, brownCardsData }

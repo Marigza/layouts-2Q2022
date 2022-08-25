@@ -1,15 +1,15 @@
 
 
-/*import blueCardsData from './data.js';
-console.log(blueCardsData[1].src);
+import { blueCardsData, greenCardsData, brownCardsData } from './data.js';
+//console.log(blueCardsData[1].src);
 
 
-const openCard = document.querySelector('.open')
 
-openCard.style.background = "url('https://github.com/Marigza/eldritch-codejam/blob/main/assets/MythicCards/blue/blue1.png?raw=true')";
+
+//openCard.style.background = "url('https://github.com/Marigza/eldritch-codejam/blob/main/assets/MythicCards/blue/blue1.png?raw=true')";
 
 const ancient = document.querySelectorAll('.ancient')
-console.log(ancient);*/
+//console.log(ancient);
 
 // выбор древнего
 
@@ -42,12 +42,6 @@ const greenSum = azatot[0].greenCards + azatot[1].greenCards + azatot[2].greenCa
 const blueSum = azatot[0].blueCards + azatot[1].blueCards + azatot[2].blueCards
 const brownSum = azatot[0].brownCards + azatot[1].brownCards + azatot[2].brownCards
 
-function getRandomNum(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return (Math.floor(Math.random() * (max - min)) + min);
-}
-
 // случайный выбор карт одного цвета в нужном для партии количестве
 
 function shuffle(array) {
@@ -60,18 +54,17 @@ function shuffle(array) {
 shuffle(green);
 let newGreen = green.slice(0, greenSum)
 shuffle(newGreen);
+//console.log(newGreen)
 
 shuffle(blue);
 let newBlue = blue.slice(0, blueSum)
 shuffle(newBlue);
+//console.log(newBlue)
 
 shuffle(brown);
 let newBrown = brown.slice(0, brownSum)
 shuffle(newBrown);
-
-console.log(newGreen)
-console.log(newBlue)
-console.log(newBrown)
+//console.log(newBrown)
 
 // !!!отбор карт по цветам и количеству в первую стадию. перемешивание этих карт.
 
@@ -79,11 +72,22 @@ const firstStage = newGreen.slice(0, azatot[0].greenCards) + ',' + newBlue.slice
 const secondStage = newGreen.slice(azatot[0].greenCards, azatot[1].greenCards + azatot[0].greenCards) + ',' + newBlue.slice(azatot[0].blueCards, azatot[1].blueCards + azatot[0].blueCards) + ',' + newBrown.slice(azatot[0].brownCards, azatot[1].brownCards + azatot[0].brownCards)
 const thirdStage = newGreen.slice(azatot[1].greenCards + azatot[0].greenCards, azatot[2].greenCards + azatot[1].greenCards + azatot[0].greenCards) + ',' + newBlue.slice(azatot[1].blueCards + azatot[0].blueCards, azatot[2].blueCards + azatot[1].blueCards + azatot[0].blueCards) + ',' + newBrown.slice(azatot[1].brownCards + azatot[0].brownCards, azatot[2].brownCards + azatot[1].brownCards + azatot[0].brownCards)
 
-// убрать пустой элемент массива, если количество карт в стадии равно 0
+//console.log(firstStage)
 
 let first = firstStage.split(',');
 let second = secondStage.split(',');
-let third = thirdStage.split(','); //здесь появляется лишний пустой элемент 
+let third = thirdStage.split(','); 
+
+function findEmptyElement(array) {
+    if (array.includes('')) {
+        let empty = array.indexOf('')
+        array.splice(empty, 1)
+    }
+    return array;
+}
+findEmptyElement(first)
+findEmptyElement(second)
+findEmptyElement(third)
 
 shuffle(first);
 shuffle(second);
@@ -93,18 +97,30 @@ shuffle(third);
 
 let readyStack = third.concat(second, first)
 
-console.log(first)
-console.log(typeof firstStage)
-console.log(second)
-console.log(third)
-console.log(readyStack)
+//console.log(first)
+//console.log(second)
+//console.log(third)
 
-// !открытие поочередно карт из получившейся колоды. !!!ДОписать цикл повторения удаления крайнего элемента
+console.log(readyStack) //стек готовый к игре
 
-readyStack.pop() // показать картинку этого удаленного элемента 
+// открытие поочередно карт из получившейся колоды.
 
-console.log(readyStack)
+const closeCard = document.querySelector('.close')
+const openCard = document.querySelector('.open')
 
+openCard.style.background = 'transparent';
 
+function showCurrentCard() {
+    if (readyStack.length !== 0) {
+        let visibleCard = readyStack.at(-1)
+        openCard.style.background = `url(./assets/MythicCards/${visibleCard}.jpg) no-repeat`;
+        console.log(visibleCard)
+        return readyStack.pop()
+    } else {
+        return closeCard.style.background = 'transparent';
+    }
+}
+
+closeCard.addEventListener('click', showCurrentCard)
 
 // связь трекера оставшихся карт с уже открытыми картами.
