@@ -112,22 +112,20 @@ console.log(readyStack) //стек готовый к игре
 
 const closeCard = document.querySelector('.close')
 const openCard = document.querySelector('.open')
-
-openCard.style.background = 'transparent';
+const image = openCard.querySelector('img')
 
 function showCurrentCard() {
     if (readyStack.length !== 0) {
         let visibleCard = readyStack.at(-1)
-        openCard.style.background = `url(./assets/MythicCards/${visibleCard}.jpg) no-repeat`;
+        image.src = `./assets/MythicCards/${visibleCard}.jpg`;
         console.log(visibleCard)
+        //console.log(image.src)
         return readyStack.pop()
     } else {
-        return closeCard.style.background = 'transparent';
+        return closeCard.textContent = 'Empty';
     }
 }
 
 closeCard.addEventListener('click', showCurrentCard)
-
-
 
 // связь трекера оставшихся карт с уже открытыми картами.
