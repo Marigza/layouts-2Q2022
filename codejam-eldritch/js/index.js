@@ -3,15 +3,19 @@
 import { blueCardsData, greenCardsData, brownCardsData } from './data.js';
 //console.log(blueCardsData[1].src);
 
-
-
-
-//openCard.style.background = "url('https://github.com/Marigza/eldritch-codejam/blob/main/assets/MythicCards/blue/blue1.png?raw=true')";
-
-const ancient = document.querySelectorAll('.ancient')
-//console.log(ancient);
-
 // выбор древнего
+
+const ancient = Array.from(document.querySelectorAll('.ancient'))
+const activAncient = document.querySelectorAll('.ancient-active')
+
+console.log(ancient);
+
+ancient.addEventListener('click', () => {
+    alert('ancient!')
+})
+
+
+
 
 // установка трека в зависимости от имени древнего
 
