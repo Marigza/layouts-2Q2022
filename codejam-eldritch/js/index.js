@@ -3,20 +3,21 @@
 import { blueCardsData, greenCardsData, brownCardsData } from './data.js';
 //console.log(blueCardsData[1].src);
 
-// выбор древнего
-
+// выбор древнего. реализация не доделана...
+/*
 const ancient = Array.from(document.querySelectorAll('.ancient'))
-const activAncient = document.querySelectorAll('.ancient-active')
-
-console.log(ancient);
-
-ancient.addEventListener('click', () => {
-    alert('ancient!')
-})
-
-
-
-
+const activAncient = document.querySelector('.ancient-active')
+function selectAncient() {
+    for (let item of ancient) {
+        item.addEventListener('click', () => {
+                item.classList.add('ancient-active')
+                console.log(item)
+            })
+        }
+    }
+      
+selectAncient()
+*/
 // установка трека в зависимости от имени древнего
 
 // выбор уровня сложности
@@ -126,5 +127,7 @@ function showCurrentCard() {
 }
 
 closeCard.addEventListener('click', showCurrentCard)
+
+
 
 // связь трекера оставшихся карт с уже открытыми картами.
