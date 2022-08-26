@@ -108,20 +108,31 @@ let readyStack = third.concat(second, first)
 
 console.log(readyStack) //стек готовый к игре
 
-// открытие поочередно карт из получившейся колоды.
+// открытие поочередно карт из получившейся колоды. трекер окончания стадии
 
 const closeCard = document.querySelector('.close')
 const openCard = document.querySelector('.open')
 const image = openCard.querySelector('img')
+const stage1 = document.querySelector('.first')
+const stage2 = document.querySelector('.second')
+const stage3 = document.querySelector('.third')
+let visibleCard;
+
 
 function showCurrentCard() {
     if (readyStack.length !== 0) {
-        let visibleCard = readyStack.at(-1)
+        visibleCard = readyStack.pop()
         image.src = `./assets/MythicCards/${visibleCard}.jpg`;
+            if (readyStack.length === second.length + third.length) {
+                stage1.classList.add('stage_is_over');
+            } else if (readyStack.length === third.length) {
+                stage2.classList.add('stage_is_over')
+            }
         console.log(visibleCard)
-        //console.log(image.src)
-        return readyStack.pop()
+        console.log(readyStack.length)
+        return visibleCard
     } else {
+        stage3.classList.add('stage_is_over')
         return closeCard.textContent = 'Empty';
     }
 }

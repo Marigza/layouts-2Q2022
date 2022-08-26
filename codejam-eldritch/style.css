@@ -97,6 +97,10 @@ cursor: pointer;
     line-height: 1.5em;
     font-weight: 700;
 }
+.stage_is_over {
+    text-decoration: line-through;
+    color: lightblue;
+}
 .green {
     width: 40px;
     height: 40px;
