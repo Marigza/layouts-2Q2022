@@ -24,6 +24,24 @@ selectAncient()
 
 // отбор карт в зависимости от уровня сложности
 
+// замес колоды
+
+const mixingDeck = document.querySelector('.button')
+const closeCard = document.querySelector('.close')
+const openCard = document.querySelector('.open')
+
+console.log(mixingDeck)
+
+function mixTheDeck() {
+    mixingDeck.classList.add('button-active')
+    closeCard.classList.remove('close')
+    openCard.classList.remove('close')
+    closeCard.classList.add('close-active')
+    openCard.classList.add('close-active')
+}
+
+mixingDeck.addEventListener('click', mixTheDeck)
+
 // подсчет количества карт разных цветов для партии
 
 const green = ['green1', 'green2', 'green3', 'green4', 'green5', 'green6', 'green7', 'green8', 'green9', 'green10', 'green11', 'green12', 'green13', 'green14', 'green15', 'green16', 'green17', 'green18'];
@@ -110,8 +128,6 @@ console.log(readyStack) //стек готовый к игре
 
 // открытие поочередно карт из получившейся колоды. трекер окончания стадии
 
-const closeCard = document.querySelector('.close')
-const openCard = document.querySelector('.open')
 const image = openCard.querySelector('img')
 const stage1 = document.querySelector('.first')
 const stage2 = document.querySelector('.second')
@@ -128,8 +144,8 @@ function showCurrentCard() {
             } else if (readyStack.length === third.length) {
                 stage2.classList.add('stage_is_over')
             }
-        console.log(visibleCard)
-        console.log(readyStack.length)
+        //console.log(visibleCard)
+        //console.log(readyStack.length)
         return visibleCard
     } else {
         stage3.classList.add('stage_is_over')
@@ -140,3 +156,10 @@ function showCurrentCard() {
 closeCard.addEventListener('click', showCurrentCard)
 
 // связь трекера оставшихся карт с уже открытыми картами.
+const cardInGameGreen1 = document.querySelector('.green1')
+const cardInGameBrown1 = document.querySelector('.brown1')
+const cardInGameBlue1 = document.querySelector('.blue1')
+ 
+/*function scanColorOfCard(color) {
+    if
+}*/

@@ -82,9 +82,7 @@ cursor: pointer;
 .tracker {
     width: 30%;
 }
-.mixing_card {
-    width: 50%;
-}
+
 .stage_title {
     font-size: 2em;
     text-align: center;
@@ -121,14 +119,39 @@ cursor: pointer;
 }
 
 .mixing_card {
+    width: 60%;
     display: flex;
     justify-content: space-around;
     height: 40vh;
 }
 
+button {
+    background: transparent;
+    font-size: 2em;
+    color: white;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+}
+.button-active {
+    display: none;
+}
+
+
+
 .close,
 .open {
-    width: fit-content; 
+    display: none;
+    width: fit-content;
+    height: 100%;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.close-active,
+.open-active {
+    display: block;
+    width: fit-content;
     height: 100%;
     border: 1px solid #fff;
     cursor: pointer;
