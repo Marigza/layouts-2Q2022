@@ -30,8 +30,6 @@ const mixingDeck = document.querySelector('.button')
 const closeCard = document.querySelector('.close')
 const openCard = document.querySelector('.open')
 
-console.log(mixingDeck)
-
 function mixTheDeck() {
     mixingDeck.classList.add('button-active')
     closeCard.classList.remove('close')
@@ -126,7 +124,7 @@ let readyStack = third.concat(second, first)
 
 console.log(readyStack) //стек готовый к игре
 
-// открытие поочередно карт из получившейся колоды. трекер окончания стадии
+// открытие поочередно карт из получившейся колоды. трекер окончания стадии, связь трекера оставшихся карт с уже открытыми картами.
 
 const image = openCard.querySelector('img')
 const stage1 = document.querySelector('.first')
@@ -134,6 +132,41 @@ const stage2 = document.querySelector('.second')
 const stage3 = document.querySelector('.third')
 let visibleCard;
 
+const cardInGameGreen1 = document.querySelector('.green1')
+const cardInGameBrown1 = document.querySelector('.brown1')
+const cardInGameBlue1 = document.querySelector('.blue1')
+
+const cardInGameGreen2 = document.querySelector('.green2')
+const cardInGameBrown2 = document.querySelector('.brown2')
+const cardInGameBlue2 = document.querySelector('.blue2')
+
+const cardInGameGreen3 = document.querySelector('.green3')
+const cardInGameBrown3 = document.querySelector('.brown3')
+const cardInGameBlue3 = document.querySelector('.blue3')
+
+function scanColorOfCard() {
+    while (readyStack.length >= second.length + third.length) {
+        switch (visibleCard[2]) {
+            case 'o': return cardInGameBrown1.textContent = Number(cardInGameBrown1.textContent) - 1;
+            case 'u': return cardInGameBlue1.textContent = Number(cardInGameBlue1.textContent) - 1;
+            case 'e': return cardInGameGreen1.textContent = Number(cardInGameGreen1.textContent) - 1;
+        }
+    }
+    while (readyStack.length >= third.length) {
+        switch (visibleCard[2]) {
+            case 'o': return cardInGameBrown2.textContent = Number(cardInGameBrown2.textContent) - 1;
+            case 'u': return cardInGameBlue2.textContent = Number(cardInGameBlue2.textContent) - 1;
+            case 'e': return cardInGameGreen2.textContent = Number(cardInGameGreen2.textContent) - 1;
+        }
+    }
+    while (readyStack.length >= 0) {
+        switch (visibleCard[2]) {
+            case 'o': return cardInGameBrown3.textContent = Number(cardInGameBrown3.textContent) - 1;
+            case 'u': return cardInGameBlue3.textContent = Number(cardInGameBlue3.textContent) - 1;
+            case 'e': return cardInGameGreen3.textContent = Number(cardInGameGreen3.textContent) - 1;
+        }
+    }
+}
 
 function showCurrentCard() {
     if (readyStack.length !== 0) {
@@ -144,7 +177,8 @@ function showCurrentCard() {
             } else if (readyStack.length === third.length) {
                 stage2.classList.add('stage_is_over')
             }
-        //console.log(visibleCard)
+        console.log(visibleCard)
+        scanColorOfCard()
         //console.log(readyStack.length)
         return visibleCard
     } else {
@@ -155,11 +189,4 @@ function showCurrentCard() {
 
 closeCard.addEventListener('click', showCurrentCard)
 
-// связь трекера оставшихся карт с уже открытыми картами.
-const cardInGameGreen1 = document.querySelector('.green1')
-const cardInGameBrown1 = document.querySelector('.brown1')
-const cardInGameBlue1 = document.querySelector('.blue1')
- 
-/*function scanColorOfCard(color) {
-    if
-}*/
+
