@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>codejam-eldritch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">Eldritch Horror</header>
+    <main class="main">
+        <div class="ancients">
+            <img id="azathot" class="ancient ancient-active" src="./assets/ancients/Azathoth.jpg" alt="Azathot">
+            <img id="cthulthu" class="ancient" src="./assets/ancients/Cthulthu.jpg" alt="Cthulthu">
+            <img id="iogSothoth" class="ancient" src="./assets/ancients/IogSothoth.jpg" alt="IogSothoth">
+            <img id="shubNiggurath" class="ancient" src="./assets/ancients/ShubNiggurath.jpg" alt="ShubNiggurath">
+        </div>
+        <div class="dificulty">
+            <div class="level">очень легкий</div>
+            <div class="level">легкий</div>
+            <div class="level level-active">средний</div>
+            <div class="level">высокий</div>
+            <div class="level">очень высокий</div>
+        </div>
+        <div class="card">
+            <div class="tracker">
+                <div class="stage">
+                    <div class="stage_title first">первая стадия</div>
+                    <div class="stage_color">
+                        <div class="green green1"></div>
+                        <div class="brown brown1"></div>
+                        <div class="blue blue1"></div>
+                    </div> 
+                </div>
+                <div class="stage">
+                    <div class="stage_title second">вторая стадия</div>
+                    <div class="stage_color">
+                        <div class="green green2"></div>
+                        <div class="brown brown2"></div>
+                        <div class="blue blue2"></div>
+                    </div>
+                </div>
+                <div class="stage">
+                    <div class="stage_title third">третья стадия</div>
+                    <div class="stage_color">
+                        <div class="green green3"></div>
+                        <div class="brown brown3"></div>
+                        <div class="blue blue3"></div>
+                    </div>
+                </div>              
+            </div>
+       
+            <div class="mixing_card">
+                <button class="button">Замешать колоду</button>
+                <div class="close">
+                    <img src="./assets/mythicCardBackground.png" alt="mythicCardBackground" height="100%">
+                </div>
+                <div class="open">
+                    <img src="#" alt="mythicCard" height="100%">
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <footer>
+        <div> All Rights Reserved © Eldritch Horror</div>
+        <div>
+            <a target="_blank" href="https://github.com/Marigza">
+                <img src="./assets/svg/github.svg" alt="github" width="34">
+            </a>
+        </div>
+        <div>
+            <a target="_blank" href="https://rs.school/js/">
+                <img src="./assets/svg/rs_school_js.svg" alt="rsschool" width="60">
+            </a>
+        </div>
+    </footer>
+    <script type="module" src="js/index.js"></script>
+</body>
+</html>

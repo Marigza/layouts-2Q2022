@@ -1,0 +1,167 @@
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+html {
+    height: 100%;
+    width: 100%;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    background: #E5E5E5;
+    font-size: 16px;
+    color: white;
+}
+
+button {
+    cursor: pointer;
+}
+
+body {
+    width: 100%;
+    height: 100%;
+    background: url(./assets/home.png) no-repeat center;
+}
+
+.header {
+    font-size: 4em; 
+    text-align: center;
+    margin-bottom: 5vh;
+}
+
+
+.ancients {
+display: flex;
+justify-content: space-around;
+width: 100%;
+height: 20vh;
+margin-bottom: 5vh;
+cursor: pointer;
+}
+
+.ancient {
+    position: relative;
+    z-index: 3;
+}
+
+.ancient:hover {
+    height: 50vh;
+}
+
+.ancient-active {
+    border: 5px solid blue;
+}
+
+.dificulty {
+    display: flex;
+    justify-content: center;
+    gap: 3em;
+    margin-bottom: 5vh;
+}
+.level {
+    width: 20vh;
+    border: 1px solid #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.level:hover {
+    border: 1px solid blue;
+}
+
+.level-active {
+    background-color: lightblue;
+    color: black;
+}
+.card {
+    display: flex;
+    height: 40vh;
+    justify-content: space-around;
+    margin-bottom: 7vh;
+}
+.tracker {
+    width: 30%;
+}
+
+.stage_title {
+    font-size: 2em;
+    text-align: center;
+}
+.stage_color {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    font-size: 1.5em;
+    line-height: 1.5em;
+    font-weight: 700;
+}
+.stage_is_over {
+    text-decoration: line-through;
+    color: lightblue;
+}
+.green {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+.brown {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #8b4513;
+}
+.blue {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #3535f9;
+}
+
+.mixing_card {
+    width: 60%;
+    display: flex;
+    justify-content: space-around;
+    height: 40vh;
+}
+
+button {
+    background: transparent;
+    font-size: 2em;
+    color: white;
+    border: 1px solid #fff;
+    width: 100%;
+    height: 100%;
+}
+.button-active {
+    display: none;
+}
+
+
+
+.close,
+.open {
+    display: none;
+    width: fit-content;
+    height: 100%;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+.close-active,
+.open-active {
+    display: block;
+    width: fit-content;
+    height: 100%;
+    border: 1px solid #fff;
+    cursor: pointer;
+}
+
+footer {
+    display: flex;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
