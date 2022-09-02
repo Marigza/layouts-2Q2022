@@ -37,33 +37,51 @@ console.log("Part2 Total points 85: \n done: 14 items");
 
 const track = document.querySelector('.destin_slider');
 const slides = Array.from(track.children);
-const nextButton = document.querySelector('.carousel__button-right');
-const prevButton = document.querySelector('.carousel__button-left');
+const nextButton = document.querySelectorAll('.destination_foto')[2];
+const prevButton = document.querySelectorAll('.destination_foto')[0];
+const centerButton = document.querySelectorAll('.destination_foto')[1];
+
 const dotsNav = document.querySelector('.pointer');
 const dots = Array.from(dotsNav.children);
-const slideSize = slides[0].getBoundingClientRect();
-const slideWidth = slideSize.width;
+const nextDot = document.querySelectorAll('.pointer_round')[2];
+const prevDot = document.querySelectorAll('.pointer_round')[0];
+const centerDot = document.querySelectorAll('.pointer_round')[1];
 
-//console.log(slideWidth);
-// arrange the slides next to the another
-const setSlidePosition = (slide, index) => {
-    slide.style.left = slideWidth * index + 'px';
-};
-slides.forEach(setSlidePosition);
+function moveSlideToLeft() {
+    track.classList.remove('slider_left_poz');
+    track.classList.add('slider_right_poz');
+    dots[1].classList.remove('pointer_round_active')
+    dots[0].classList.remove('pointer_round_active')
+    dots[2].classList.add('pointer_round_active')
+}
 
-// when I click left, move slides to the left
+function moveSlideToRight() {
+    track.classList.remove('slider_right_poz');
+    track.classList.add('slider_left_poz');
+    dots[1].classList.remove('pointer_round_active')
+    dots[2].classList.remove('pointer_round_active')
+    dots[0].classList.add('pointer_round_active')
+}
 
+function moveCenterSlide() {
+    if (track.classList.contains('slider_right_poz')) {
+        track.classList.remove('slider_right_poz')
+        dots[2].classList.remove('pointer_round_active')
+        dots[0].classList.remove('pointer_round_active')
+        dots[1].classList.add('pointer_round_active')
+    } else  if (track.classList.contains('slider_left_poz')) {
+        track.classList.remove('slider_left_poz')
+        dots[0].classList.remove('pointer_round_active')
+        dots[2].classList.remove('pointer_round_active')
+        dots[1].classList.add('pointer_round_active')
+    }
+}
 
-// when I click right, move slides to the right
-nextButton.addEventListener('click', e => {
-    //move to the next slide
-    const currentSlide = track.querySelector('.current-slide');
-    const NextSlide = currentSlide.nextElementSibling;
-    const amountToMove = NextSlide.style.left;
-    
-    track.style.transform = 'translaleX(-' + amountToMove + ')'
-    //console.log(amountToMove);
+nextButton.addEventListener('click', moveSlideToLeft)
+prevButton.addEventListener('click', moveSlideToRight)
+centerButton.addEventListener('click', moveCenterSlide)
 
-})
+nextDot.addEventListener('click', moveSlideToLeft)
+prevDot.addEventListener('click', moveSlideToRight)
+centerDot.addEventListener('click', moveCenterSlide)
 
-// when I click the indicator, move to that slide
