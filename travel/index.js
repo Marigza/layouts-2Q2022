@@ -85,3 +85,35 @@ nextDot.addEventListener('click', moveSlideToLeft)
 prevDot.addEventListener('click', moveSlideToRight)
 centerDot.addEventListener('click', moveCenterSlide)
 
+// carousel for adaptive version
+
+const arrowLeft = document.querySelector('.destin_arrow-left')
+const arrowRight = document.querySelector('.destin_arrow-right')
+
+function moveSmallSlideToLeft() {
+    if (track.classList.contains('slider_left_poz')) {
+        track.classList.remove('slider_left_poz');
+        dots[0].classList.remove('pointer_round_active')
+        dots[1].classList.add('pointer_round_active')
+    } else {
+        track.classList.add('slider_right_poz');
+        dots[1].classList.remove('pointer_round_active')
+        dots[2].classList.add('pointer_round_active')
+    }
+}
+
+function moveSmallSlideToRight() {
+    if (track.classList.contains('slider_right_poz')) {
+        track.classList.remove('slider_right_poz');
+        dots[2].classList.remove('pointer_round_active')
+        dots[1].classList.add('pointer_round_active')
+    } else {
+        track.classList.add('slider_left_poz');
+        dots[1].classList.remove('pointer_round_active')
+        dots[0].classList.add('pointer_round_active')
+    }
+    
+}
+
+arrowLeft.addEventListener('click', moveSmallSlideToRight)
+arrowRight.addEventListener('click', moveSmallSlideToLeft)

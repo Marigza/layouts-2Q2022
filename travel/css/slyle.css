@@ -421,9 +421,7 @@ input::placeholder {
 }
 
 .pointer_round_active {
-    
     background-color: rgba(242, 120, 92);
-    
 }
 
 .destination_link {
@@ -814,6 +812,16 @@ input::placeholder {
         font-size: 14px;
         line-height: 19px;
     }
+    .destination_item {
+        height: 236px;
+        margin-bottom: 0px;
+    }
+    .slider_right_poz {
+        right: 420px;
+    }
+    .slider_left_poz {
+        left: 420px;
+    }
     .stories_title {
         font-size: 14px;
         line-height: 19px;
@@ -859,7 +867,7 @@ input::placeholder {
     .destination_title {
         margin-bottom: 15px;
     }
-    .destination_foto:nth-child(1) {
+    /*.destination_foto:nth-child(1) {
         order: 2;
     }
     .destination_foto:nth-child(2) {
@@ -867,7 +875,7 @@ input::placeholder {
     }
     .destination_foto:nth-child(3) {
         order: 3;
-    }
+    }*/
     .foto {
         display: none;
     }
@@ -887,20 +895,28 @@ input::placeholder {
         width: 90%;
         display: flex;
         justify-content: space-between;
+        z-index: 3;
     }
+    /*.destin_arrow-left {
+
+    } 
+    .destin_arrow-right {
+
+    }*/
+
     .pointer {
+        position: relative;
+        z-index: 3;
         gap: 6px;
         margin-top: -40px;
     }
-    .pointer_round, 
-    .pointer_round:nth-child(2) {
+    .pointer_round {
+        background-color: rgba(242, 120, 92, 0.5);
         width: 8px;
         height: 8px;
     }
-    .pointer_round:nth-child(2) {    
-        background-color: rgba(242, 120, 92, 0.5);
-    }
-    .pointer_round:nth-child(1) {
+
+    .pointer_round_active {
         background-color: rgba(242, 120, 92);
     }
     .destination_link {
@@ -1029,6 +1045,12 @@ input::placeholder {
     }
     .step_item:nth-child(2) {
         width: 80px;
+    }
+    .slider_right_poz {
+        right: 360px;
+    }
+    .slider_left_poz {
+        left: 360px;
     }
 }
 
