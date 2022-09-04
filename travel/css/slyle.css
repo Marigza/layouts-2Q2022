@@ -897,12 +897,28 @@ input::placeholder {
         justify-content: space-between;
         z-index: 3;
     }
-    /*.destin_arrow-left {
-
+    .destin_arrow-left {
+        width: 30px;
+        height: 30px;
+        background: url('../img/svg/arrowSlider.svg');
+        transform: rotate(180deg);
+        
     } 
     .destin_arrow-right {
+        width: 30px;
+        height: 30px;
+        background: url('../img/svg/arrowSlider.svg');
+    }
 
-    }*/
+    .arrow-left_non-active {
+        background: url('../img/svg/arrowSliderOpasity.svg');
+        transform: rotate(0deg);
+    }
+
+    .arrow-right_non-active {
+        background: url('../img/svg/arrowSliderOpasity.svg');
+        transform: rotate(180deg);
+    }
 
     .pointer {
         position: relative;

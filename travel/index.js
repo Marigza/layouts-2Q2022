@@ -53,6 +53,8 @@ function moveSlideToLeft() {
     dots[1].classList.remove('pointer_round_active')
     dots[0].classList.remove('pointer_round_active')
     dots[2].classList.add('pointer_round_active')
+    arrowRight.classList.add('arrow-right_non-active')
+    arrowLeft.classList.remove('arrow-left_non-active')
 }
 
 function moveSlideToRight() {
@@ -61,6 +63,8 @@ function moveSlideToRight() {
     dots[1].classList.remove('pointer_round_active')
     dots[2].classList.remove('pointer_round_active')
     dots[0].classList.add('pointer_round_active')
+    arrowLeft.classList.add('arrow-left_non-active')
+    arrowRight.classList.remove('arrow-right_non-active')
 }
 
 function moveCenterSlide() {
@@ -69,11 +73,13 @@ function moveCenterSlide() {
         dots[2].classList.remove('pointer_round_active')
         dots[0].classList.remove('pointer_round_active')
         dots[1].classList.add('pointer_round_active')
+        arrowRight.classList.remove('arrow-right_non-active')
     } else  if (track.classList.contains('slider_left_poz')) {
         track.classList.remove('slider_left_poz')
         dots[0].classList.remove('pointer_round_active')
         dots[2].classList.remove('pointer_round_active')
         dots[1].classList.add('pointer_round_active')
+        arrowLeft.classList.remove('arrow-left_non-active')
     }
 }
 
@@ -95,10 +101,12 @@ function moveSmallSlideToLeft() {
         track.classList.remove('slider_left_poz');
         dots[0].classList.remove('pointer_round_active')
         dots[1].classList.add('pointer_round_active')
+        arrowLeft.classList.remove('arrow-left_non-active')
     } else {
         track.classList.add('slider_right_poz');
         dots[1].classList.remove('pointer_round_active')
         dots[2].classList.add('pointer_round_active')
+        arrowRight.classList.add('arrow-right_non-active')
     }
 }
 
@@ -107,13 +115,18 @@ function moveSmallSlideToRight() {
         track.classList.remove('slider_right_poz');
         dots[2].classList.remove('pointer_round_active')
         dots[1].classList.add('pointer_round_active')
+        arrowRight.classList.remove('arrow-right_non-active')
     } else {
         track.classList.add('slider_left_poz');
         dots[1].classList.remove('pointer_round_active')
         dots[0].classList.add('pointer_round_active')
+        arrowLeft.classList.add('arrow-left_non-active')
     }
     
 }
 
 arrowLeft.addEventListener('click', moveSmallSlideToRight)
 arrowRight.addEventListener('click', moveSmallSlideToLeft)
+
+ // плавность передвижения слайдера в десктоп версии
+
