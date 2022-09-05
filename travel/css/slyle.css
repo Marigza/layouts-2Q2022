@@ -357,9 +357,7 @@ input::placeholder {
     overflow: hidden;
     margin-bottom: 46px;
 }
-.destination_track {
-    height: 100%;
-}
+
 .destination_foto {
     cursor: pointer;
 }
@@ -370,17 +368,18 @@ input::placeholder {
     justify-content: center;
     padding: 0px;
     gap: 60px;
-    transition: transform 1s;
-    /*transition: 0.2s;*/
+    left: 0;
+    /*transition: transform 1s;*/
+    transition: 1s;
     position: relative;
     height: 100%;
 }
 .slider_right_poz {
-    right: 860px;
+    left: -860px;
 }
 
 .slider_left_poz {
-    left: 860px;
+    left: 860px; 
 }
 
 .foto {
@@ -817,7 +816,7 @@ input::placeholder {
         margin-bottom: 0px;
     }
     .slider_right_poz {
-        right: 420px;
+        left: -420px;
     }
     .slider_left_poz {
         left: 420px;
@@ -1063,7 +1062,7 @@ input::placeholder {
         width: 80px;
     }
     .slider_right_poz {
-        right: 360px;
+        left: -360px;
     }
     .slider_left_poz {
         left: 360px;
