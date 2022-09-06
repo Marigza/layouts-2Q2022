@@ -128,5 +128,61 @@ function moveSmallSlideToRight() {
 arrowLeft.addEventListener('click', moveSmallSlideToRight)
 arrowRight.addEventListener('click', moveSmallSlideToLeft)
 
- // плавность передвижения слайдера в десктоп версии
+ // окна поп ап: singIn и login
 
+const headerLogin = document.querySelector('.header_login') 
+const headerAccount = document.querySelector('.account')
+const modalWindow = document.querySelector('.modal')
+const dialogSingIn = document.querySelector('.modal-dialog1')
+const dialogRegister = document.querySelector('.modal-dialog2')
+const register = document.querySelector('.register')
+const logIn = document.querySelector('.loginer')
+const SingInButton = document.querySelector('.modal-button')
+const form = document.forms.login
+let formMail = form.elements.email
+let formPass = form.elements.pass
+
+function modalActive() {
+    modalWindow.style.visibility = "visible"
+    modalWindow.style.opacity = "1"
+}
+
+function dialog1Active() {
+    modalActive()
+    dialogSingIn.style.visibility = "visible"
+    dialogSingIn.style.opacity = "1"
+    dialogRegister.style.visibility = "hidden"
+    dialogRegister.style.opacity = "0"
+}
+
+function dialog2Active() {
+    modalActive()
+    dialogSingIn.style.visibility = "hidden"
+    dialogSingIn.style.opacity = "0"
+    dialogRegister.style.visibility = "visible"
+    dialogRegister.style.opacity = "1"
+}
+
+function closeModal() {
+    modalWindow.style.visibility = "hidden"
+    modalWindow.style.opacity = "0"
+    dialogSingIn.style.visibility = "hidden"
+    dialogSingIn.style.opacity = "0"
+    dialogRegister.style.visibility = "hidden"
+    dialogRegister.style.opacity = "0"
+}
+
+headerLogin.addEventListener('click', dialog1Active)
+headerAccount.addEventListener('click', dialog1Active)
+register.addEventListener('click', dialog2Active) 
+logIn.addEventListener('click', dialog1Active)
+modalWindow.addEventListener('click', closeModal)
+
+// браузерный алерт
+
+/*function singInEnter() {
+    alert(formMail.value)
+    
+}
+
+SingInButton.addEventListener('click', singInEnter)*/
