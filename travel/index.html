@@ -33,7 +33,7 @@
                             <a href="#stories" class="header_link">Travel Stories</a>
                         </li>
                         <li class="header-item">
-                            <a href="#account" class="header_link">Account</a>
+                            <a href="#account" class="header_link account">Account</a>
                         </li>
                         <li class="header-item">
                             <a href="#social" class="header_link">Social Media</a>
@@ -95,36 +95,38 @@
         </section>
         <section class="destinations" id="destin">
             <h2 class="destination_title">POPULAR DESTINATIONS</h2>
-            <div class="destination_item">
-                <div class="destination_foto">
-                    <img class="foto" src="../travel/img/spain.jpg" alt="Spain">
-                    <img class="foto_small" src="../travel/img/spainMini.jpg" alt="Spain">
-                    <div class="destination_caption">spain</div>
+
+            <div class="slider-wrapper">
+                <div class="destination_item">
+                    <div class="destin_slider">
+                        <div class="destination_foto">
+                            <img class="foto" src="../travel/img/spain.jpg" alt="Spain">
+                            <img class="foto_small" src="../travel/img/spainMini.jpg" alt="Spain">
+                            <div class="destination_caption">spain</div>
+                        </div>
+                        <div class="destination_foto">
+                            <img class="foto" src="../travel/img/japan.jpg" alt="Japan">
+                            <img class="foto_small" src="../travel/img/japanMini.jpg" alt="Japan">
+                            <div class="destination_caption">japan</div>
+                        </div>
+                        <div class="destination_foto">
+                            <img class="foto" src="../travel/img/usa.jpg" alt="USA">
+                            <img class="foto_small" src="../travel/img/usaMini.jpg" alt="USA">
+                            <div class="destination_caption">usa</div>
+                        </div>
+                    </div>
                 </div>
-                <div class="destination_foto">
-                    <img class="foto" src="../travel/img/japan.jpg" alt="Japan">
-                    <img class="foto_small" src="../travel/img/japanMini.jpg" alt="Japan">
-                    <div class="destination_caption">japan</div>
-                </div>
-                <div class="destination_foto">
-                    <img class="foto" src="../travel/img/usa.jpg" alt="USA">
-                    <img class="foto_small" src="../travel/img/usaMini.jpg" alt="USA">
-                    <div class="destination_caption">usa</div>
-                </div>
-            </div>
-            <div class="destin_arrows">
-                <div class="destin_arrow-left">
-                    <img src="../travel/img/svg/arrowSliderOpasity.svg" alt="left">
-                </div>
-                <div class="destin_arrow-right">
-                    <img src="../travel/img/svg/arrowSlider.svg" alt="right">
-                </div>
+                <div class="destin_arrows">
+                    <div class="destin_arrow-left"></div>
+                    <div class="destin_arrow-right"></div>
+                </div>    
             </div>
             <div class="pointer">
                 <div class="pointer_round"></div>
-                <div class="pointer_round"></div>
+                <div class="pointer_round pointer_round_active"></div>
                 <div class="pointer_round"></div>
             </div>
+
             <button class="destination_link">
                 <img src="../travel/img/svg/arrow-right.svg" alt="find more" class="arrow_small">
                 <span class="link_find_more">Find More</span>
@@ -232,7 +234,58 @@
             </ul>
         </div>
     </footer>
-    
+    <div class="modal"></div>
+    <div class="modal-dialog1">
+        <div class="modal-dialog-header">
+            <div class="headline">Log in to your account</div>
+            <div class="head-link1">
+                <div><img src="./img/svg/path14.svg" alt="Facebook"></div>
+                <a class="link-facebook" target="_blank" href="https://facebook.com">Sing In with Facebook</a>
+            </div>
+            <div class="head-link2">
+                <div><img src="./img/svg/Google Logo.svg" alt="Google"></div>
+                <a class="link-google" target="_blank" href="https://google.com">Sing In with Google</a>
+            </div>
+        </div>
+        <div class="modal-dialog-main">
+            <div class="line-separator">
+                <div class="line-decoration"></div>
+                <div class="line-decoratoin-text">or</div>
+                <div class="line-decoration"></div>
+            </div>
+            <form action="#" name="login">
+                <div class="modal-text">E-mail</div>
+                <input type="email" class="modal-input" name="email">
+                <div class="modal-text">Password</div>
+                <input type="password" class="modal-input" name="pass">
+                <button class="modal-button">Sing In</button>
+            </form>
+            <div class="modal-text-underline">Forgot Your Password?</div>
+            <div class="line-decoration"></div>
+        </div>
+        <div class="modal-dialog-footer">
+                Don't have an account? <a href="#" class="modal-text-underline register">Register</a>
+        </div>
+    </div>
+    <div class="modal-dialog2">
+        <div class="modal-dialog-header">
+            <div class="headline">Create account</div>
+        </div>
+        <div class="modal-dialog-main">
+            <form action="#" name="login">
+                <div class="modal-text">E-mail</div>
+                <input type="email" class="modal-input" name="email">
+                <div class="modal-text">Password</div>
+                <input type="password" class="modal-input" name="pass">
+                <button class="modal-button">Sing In</button>
+            </form>
+            <div class="line-decoration"></div>
+        </div>
+        <div class="modal-dialog-footer">
+                Already have an account? <a href="#" class="modal-text-underline loginer">Log in</a>
+        </div>
+    </div>
+
     <script src="index.js"></script>
 </body>
 </html>
